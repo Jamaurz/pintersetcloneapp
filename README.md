@@ -1,15 +1,14 @@
-# MERN
+# Pinterest Clone
 
 * Router
 * Twitter auth
+* 
+User Story: As an unauthenticated user, I can login with Twitter.
 
-## start
-    cmd >> webpack
-    cmd >> node bin/www
-    
-## .env
-    CONSUMER_KEY=
-    CONSUMER_SECRET=
-    MONGO_URI=
-    PORT=8080
-    APP_URL=
+User Story: As an authenticated user, I can link to images.
+
+User Story: As an authenticated user, I can delete images that I've linked to.
+
+User Story: As an authenticated user, I can see a Pinterest-style wall of all the images I've linked to.
+
+User Story: As an authenticated user, if I upload an image that is broken, it will be replaced by a placeholder image. (can use jQuery broken image detection)
