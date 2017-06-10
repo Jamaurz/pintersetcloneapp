@@ -28,7 +28,8 @@ app.use(cors({ origin: '*' }));
 // MIDDLEWARE //
 app.use(express.static(path.join(__dirname, '../public')));
 
-mongoose.connect('mongodb://jamaurz:1@ds161121.mlab.com:61121/cloneapp');
+mongoose.connect(process.env.MONGO_URI);
+console.log('mongo', process.env.MONGO_URI);
 mongoose.Promise = global.Promise;
 
 app.use(session({

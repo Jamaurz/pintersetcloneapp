@@ -2,7 +2,7 @@
 
 * Router
 * Twitter auth
-* 
+
 User Story: As an unauthenticated user, I can login with Twitter.
 
 User Story: As an authenticated user, I can link to images.
