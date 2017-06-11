@@ -6,7 +6,7 @@ export default function MyTumbnail(props) {
         if (props.id == props.item[0].owner) {
             return (
                 <Col xs={6} md={4}>
-                    <Thumbnail>
+                    <Thumbnail class="grid-item">
                         <ListGroup>
                             <ListGroupItem>Add New Item</ListGroupItem>
                         </ListGroup>

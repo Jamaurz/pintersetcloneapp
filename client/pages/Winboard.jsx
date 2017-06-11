@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from "react-redux"
 
 import { Grid, Row } from 'react-bootstrap';
+import MasonryInfiniteScroller from 'react-masonry-infinite';
 
 import MyModal from '../components/MyModal.jsx'
 import MyImage from '../components/Image.jsx'
@@ -60,12 +61,16 @@ export default class Recipe extends React.Component {
             <div>
                 <MyModal send={this.send.bind(this)} />
                 <Grid>
-                    <Row class="show-grid">
+                    <Row>
                         <MyTumbnail id={this.props.id} item={this.props.winboard} openModal={this.openModal.bind(this)}/>
+                    </Row>
+                    <Row class="show-grid">
+                        <MasonryInfiniteScroller>
                             {this.props.winboard.map((item) => {
                                 return <MyImage key={item._id} id={this.props.id} mode="winboard" item={item} removeImage={() => {this.removeImage(item._id) }} />
                             })
                             }
+                        </MasonryInfiniteScroller>
                     </Row>
                 </Grid>
             </div>
