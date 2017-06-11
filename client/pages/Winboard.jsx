@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from "react-redux"
 
 import { Grid, Row } from 'react-bootstrap';
-import MasonryInfiniteScroller from 'react-masonry-infinite';
+import Masonry from 'react-masonry-component';
 
 import MyModal from '../components/MyModal.jsx'
 import MyImage from '../components/Image.jsx'
@@ -23,7 +23,6 @@ export default class Recipe extends React.Component {
     componentWillMount() {
         this.getImgs = this.getImgs.bind(this);
         this.getImgs();
-        console.log('WINBOARD ID', this.props.id)
     }
     
     getImgs() {
@@ -62,15 +61,16 @@ export default class Recipe extends React.Component {
                 <MyModal send={this.send.bind(this)} />
                 <Grid>
                     <Row>
-                        <MyTumbnail id={this.props.id} item={this.props.winboard} openModal={this.openModal.bind(this)}/>
+                        
                     </Row>
                     <Row class="show-grid">
-                        <MasonryInfiniteScroller>
+                        <Masonry>
+                            <MyTumbnail id={this.props.id} item={this.props.winboard} openModal={this.openModal.bind(this)}/>
                             {this.props.winboard.map((item) => {
                                 return <MyImage key={item._id} id={this.props.id} mode="winboard" item={item} removeImage={() => {this.removeImage(item._id) }} />
                             })
                             }
-                        </MasonryInfiniteScroller>
+                        </Masonry>
                     </Row>
                 </Grid>
             </div>

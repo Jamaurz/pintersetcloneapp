@@ -2,11 +2,10 @@ import React from 'react';
 import { connect } from "react-redux"
 
 import { Grid, Row, Jumbotron } from 'react-bootstrap';
-import MasonryInfiniteScroller from 'react-masonry-infinite';
 
 import { getImgs, storeWinboardHome } from '../actions/imageActions'
 import MyImage from '../components/Image.jsx'
-
+import Masonry from 'react-masonry-component';
 
 @connect((store) => {
     return {
@@ -41,13 +40,13 @@ export default class Recipe extends React.Component {
                             it will be replaced by a placeholder image.
                         </p>
                     </Jumbotron>
-                    <MasonryInfiniteScroller>
+                    <Masonry>
                     {
                         this.props.winboardHome.map((item) => {
                             return <MyImage mode="home" id={this.props.id} key={item._id} item={item} />
                         })
                     }
-                    </MasonryInfiniteScroller>
+                    </Masonry>
                 </Row>
             </Grid>
         )

@@ -14,7 +14,7 @@ export default function Image(props) {
     }
     return (
         <Col xs={12} sm={6} md={4}>
-            <Thumbnail src={props.item.source} alt={props.item.title} >
+            <Thumbnail src={props.item.source} alt={props.item.title}>
                 <ListGroup>
                     <ListGroupItem>Title: {props.item.title}</ListGroupItem>
                     <ListGroupItem>Author: {props.item.ownername}</ListGroupItem>
