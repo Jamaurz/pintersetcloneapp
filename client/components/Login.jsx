@@ -9,17 +9,14 @@ export default function Login(props) {
                 <Navbar inverse>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#">{ login }</a>
+                            <NavDropdown eventKey={1} title={ login } id="basic-nav-dropdown">
+                                <MenuItem eventKey={1.1} href='/logout'><Glyphicon glyph="log-out" />Logout</MenuItem>
+                            </NavDropdown>
                         </Navbar.Brand>
                     </Navbar.Header>
                     <Nav pullRight>
                         <NavItem eventKey={1} href='/#/' >Home</NavItem>
-                        <NavItem eventKey={2} href='/#/edit' >edit</NavItem>
-                        <NavDropdown eventKey={3} title={<Glyphicon glyph="menu-hamburger" />} id="basic-nav-dropdown">
-                            <MenuItem eventKey={3.1} href='/#/winboard'>My Winboard</MenuItem>
-                            <MenuItem divider />
-                            <MenuItem eventKey={3.2} href='/logout'><Glyphicon glyph="log-out" />Logout</MenuItem>
-                        </NavDropdown>
+                        <MenuItem eventKey={2} href='/#/winboard'>My Winboard</MenuItem>
                     </Nav>
                 </Navbar>
             </div>

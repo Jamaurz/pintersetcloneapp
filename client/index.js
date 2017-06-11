@@ -28,7 +28,7 @@ ReactDOM.render(
             <Route path='/' component={Layout}>
                 <IndexRoute component={Home}/>
                 <Route path='edit(/:id)' component={Edit}/>
-                <Route path='winboard' component={Winboard} />
+                <Route path='winboard(/:id)' component={Winboard} />
             </Route>
         </Router>
     </Provider>,

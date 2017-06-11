@@ -10,8 +10,8 @@ export default {
     singIn() {
         return axios.get(apiPrefix + '/info')
     },
-    getImgsOwner() {
-       return axios.post(apiPrefix + '/getimgsowner');
+    getImgsOwner(id) {
+       return axios.post(apiPrefix + '/getimgsowner', {id});
     },
     getImgs() {
        return axios.get(apiPrefix + '/getimgs');

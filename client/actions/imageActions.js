@@ -11,8 +11,8 @@ export function addImage(value, callback) {
     });
 }
 
-export function getImgsOwner(callback) {
-    api.getImgsOwner().then(function(data) {
+export function getImgsOwner(id, callback) {
+    api.getImgsOwner(id).then(function(data) {
         if(data) {
             callback(data.data);
         }

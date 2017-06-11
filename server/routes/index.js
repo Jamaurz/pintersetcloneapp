@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/getimgsowner', function(req, res) {
-    var user = req.user.twitter.id;
+    var user = req.body.id;
     db.getImgsOwner(user, function(data) {
         res.send(data);
     });
@@ -39,7 +39,7 @@ app.post('/addimage', function (req, res) {
 
 app.get('/info', function (req, res) {
     if(req.user){
-        res.send(req.user.twitter.displayName);    
+        res.send(req.user.twitter);    
     } else {
         req.send(false);   
     }

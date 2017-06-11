@@ -12,7 +12,7 @@ import './Layout.sass';
 @connect((store, ownProps) => {
     //console.log('ownProps', ownProps);
     return {
-        user: store.twitter.user,
+        user: store.twitter.user.displayName,
         goal: store.common.goal
     };
 })
@@ -21,7 +21,6 @@ export default class Layout extends React.Component {
         var tempThis = this;
         singIn(function(data) {
             tempThis.props.dispatch(singInTwitter(data));
-            console.log('path2', tempThis.props.goal, tempThis.props.user)
             tempThis.props.router.push(tempThis.props.goal);
         });
         
