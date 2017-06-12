@@ -17,9 +17,9 @@ export default function MyTumbnail(props) {
                 </Col>
             )
         } else {
-            return <i></i>
+            return <div></div>
         }
     } else {
-        return <i></i>
+        return <div></div>
     }
 }

@@ -13,7 +13,7 @@ import { getImgsOwner, storeWinboard, addImage, removeImg } from '../actions/ima
 
 @connect((store, ownProps) => {
     return {
-        user: store.twitter.user.displayName,
+        user: store.twitter.user,
         id: store.twitter.user.id,
         winboard: store.image.winboard,
         params: ownProps.routeParams
@@ -61,11 +61,10 @@ export default class Recipe extends React.Component {
                 <MyModal send={this.send.bind(this)} />
                 <Grid>
                     <Row>
-                        
+                        <MyTumbnail id={this.props.id} item={this.props.winboard} openModal={this.openModal.bind(this)}/>
                     </Row>
                     <Row class="show-grid">
                         <Masonry>
-                            <MyTumbnail id={this.props.id} item={this.props.winboard} openModal={this.openModal.bind(this)}/>
                             {this.props.winboard.map((item) => {
                                 return <MyImage key={item._id} id={this.props.id} mode="winboard" item={item} removeImage={() => {this.removeImage(item._id) }} />
                             })

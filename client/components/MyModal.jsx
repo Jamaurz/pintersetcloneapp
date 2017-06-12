@@ -51,7 +51,6 @@ export default class MyModal extends React.Component {
     }
     
     add() {
-        console.log('add', this.state)
         this.props.send(this.state);
     }
 

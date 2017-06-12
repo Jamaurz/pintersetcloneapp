@@ -10,7 +10,6 @@ import Login from '../components/Login.jsx';
 import './Layout.sass';
 
 @connect((store, ownProps) => {
-    //console.log('ownProps', ownProps);
     return {
         user: store.twitter.user.displayName,
         goal: store.common.goal
@@ -21,17 +20,16 @@ export default class Layout extends React.Component {
         var tempThis = this;
         singIn(function(data) {
             tempThis.props.dispatch(singInTwitter(data));
-            tempThis.props.router.push(tempThis.props.goal);
+            //tempThis.props.router.push(tempThis.props.goal);
         });
-        
-        this.props.dispatch(goal(this.props.location.pathname))
-        if(!this.props.user) {
-            this.props.router.push('/');
-        }
+        console.log('componnent will mount', this.props.user);
+        //this.props.dispatch(goal(this.props.location.pathname))
+        // if(!this.props.user) {
+        //     this.props.router.push('/');
+        // }
     }
     
     render() {
-        
         return (
             <div class='appContainer'>
                 <div class='navigation'>

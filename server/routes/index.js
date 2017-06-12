@@ -9,6 +9,9 @@ app.get('/', function (req, res) {
 
 app.post('/getimgsowner', function(req, res) {
     var user = req.body.id;
+    if (!user && req.user.twitter) {
+        user = req.user.twitter.id
+    }
     db.getImgsOwner(user, function(data) {
         res.send(data);
     });
