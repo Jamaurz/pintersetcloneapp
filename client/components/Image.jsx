@@ -10,7 +10,7 @@ export default function Image(props) {
             button = <Button bsStyle="danger" onClick={props.removeImage}>Delete</Button>;
         }
     } else if (props.mode == 'home') {
-        button = <Button bsStyle="success" ><Link to={`winboard/${props.item.owner}`}>Visit wall</Link></Button>;
+        button = <Link to={`winboard/${props.item.owner}`}><Button bsStyle="success" >Visit wall</Button></Link>;
     }
     return (
         <Col xs={12} sm={6} md={4}>
