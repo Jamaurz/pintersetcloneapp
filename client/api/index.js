@@ -2,7 +2,7 @@ var axios = require('axios');
 
 //import { apiPrefix } from '../../etc/config.json';
 //var apiPrefix = 'https://cloneapp-jamaurz.c9users.io';
-var apiPrefix = 'https://jamaurzcloneapp.herokuapp.com/';
+var apiPrefix = 'https://jamaurzcloneapp.herokuapp.com';
 
 export default {
     addImage(image) {

@@ -16562,7 +16562,7 @@ var axios = __webpack_require__(404);
 
 //import { apiPrefix } from '../../etc/config.json';
 //var apiPrefix = 'https://cloneapp-jamaurz.c9users.io';
-var apiPrefix = 'https://jamaurzcloneapp.herokuapp.com/';
+var apiPrefix = 'https://jamaurzcloneapp.herokuapp.com';
 
 exports.default = {
     addImage: function addImage(image) {
