@@ -6,7 +6,7 @@
 ## Heroku
 http://jamaurzcloneapp.herokuapp.com/
 
-## User Story
+### User Story
 * As an unauthenticated user, I can login with Twitter.
 
 * As an authenticated user, I can link to images.
